@@ -76,6 +76,23 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['env', 'react', 'stage-2']
+            }
+          }
+        ]
+      }, 
+      {
+        test: /\.json$/,
+        exclude: /(node_modules)/,
+        loader: 'json-loader'
       }
     ]
   },
@@ -83,8 +100,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
       // favicon: 'src/images/icon.png'
-    })
-    // ,
-    // new ExtractTextPlugin('styles.css')
+    }),
+    new ExtractTextPlugin('styles.css')
   ]
 }
