@@ -4,7 +4,7 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        hello from App.js component
+        Hello from App.js component
       </div>
     )
   }
