@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 
-// Side-Note: The name of this parameter must match the attribute of the tag that renders it (in this case, the ModuleList tag in App.js's render() method has an attribute named "modules")
+// Side-Note: The name of this parameter must match the property of the tag that renders it (in this case, the ModuleList tag in App.js's render() method has a property named "modules")
 export const ModuleList = ({modules}) => (
   <div className="moduleList">
     {modules.map((module, i) =>

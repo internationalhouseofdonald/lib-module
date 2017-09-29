@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { ModuleList } from './ModuleList';
+import data from '../data.json';
 
 export class App extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export class App extends Component {
     return (
       <div className="app">
         <div className="jumbotron">
-          <h1 style={{fontSize: "8rem"}}>Features</h1>
+          <h1 style={{fontSize: "8rem"}}>{data.key}</h1>
         </div>
         <ModuleList modules={this.state.list} />
       </div>
