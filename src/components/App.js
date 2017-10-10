@@ -29,10 +29,10 @@ export class App extends Component {
       {
         console.log(this.props.location.pathname)
       }
-        <div className="jumbotron text-center">
+        <div className="jumbotron jumbotron-fluid text-white text-center">
           <h1 style={{fontSize: "8rem"}}>{data.key}</h1>
           <Link to="/">
-            <div className="btn btn-outline-violet m-2">Main</div>
+            <div className="btn btn-primary m-2">Main</div>
           </Link>
         </div>
         <Switch>

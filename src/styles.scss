@@ -1,21 +1,21 @@
-$indigo: #821AFF;
-$cooler: #AF17E8;
-$violet: #FF0DFF;
-$warmer: #E81780;
-$red: #FF1A1A;
+$purple: #BD2DED;
+$royalblue: #4B23F7;
+$blue: #2B6BE0;
+$cadetblue: #405073;
+$robinsegg: #23E0F7;
+$seafoamgreen: #21ED8F;
+$red: #FD1B03;
+$magenta: #E609A2;
 
 .jumbotron {
-  background: $indigo;
-  color: white;
+  background: $cadetblue;
+  border: 20px solid desaturate(lighten($cadetblue, 20%), 50%);
 }
 
-.btn-outline-violet {
-  border: 1px solid $violet;
-  background: white;
-  color: $violet;
+.btn {
   cursor: pointer;
-  &:hover {
-    background: $violet;
-    color: white;
-  }
+}
+
+.btn-primary {
+  background: $blue;
 }

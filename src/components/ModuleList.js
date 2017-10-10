@@ -34,7 +34,7 @@ export class ModuleList extends Component {
         {this.state.list.map((module, i) =>
           <div key={i} className="card p-3 m-3 text-center">
             <Link to={module.permalink}>
-              <button className="btn btn-outline-violet m-2">{module.module}</button>
+              <button className="btn btn-primary m-2">{module.module}</button>
             </Link>
             <p>
               {module.description}
