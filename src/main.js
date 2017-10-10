@@ -5,12 +5,12 @@ import data from './data.json';
 import markdown from './markdown.md';
 import { Whoops404 } from './components/Whoops404';
 import { App } from './components/App';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 window.React = React;
 
 render(
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
       <Route exact path="/" component={App} /> 
       <Route exact path="/reactjs" component={App} /> 
@@ -18,6 +18,6 @@ render(
       <Route exact path="/bootstrap" component={App} /> 
       <Route component={Whoops404} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
   , document.getElementById('react-container')
 );
