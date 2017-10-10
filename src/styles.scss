@@ -1,0 +1,21 @@
+$indigo: #821AFF;
+$cooler: #AF17E8;
+$violet: #FF0DFF;
+$warmer: #E81780;
+$red: #FF1A1A;
+
+.jumbotron {
+  background: $indigo;
+  color: white;
+}
+
+.btn-outline-violet {
+  border: 1px solid $violet;
+  background: white;
+  color: $violet;
+  cursor: pointer;
+  &:hover {
+    background: $violet;
+    color: white;
+  }
+}

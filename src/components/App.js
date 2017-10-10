@@ -1,19 +1,24 @@
 import { Component } from 'react';
+import { Link, Route, Switch, Redirect } from 'react-router-dom';
+import { Whoops404 } from './Whoops404';
+import { ReactJs } from './ReactJs';
+import { Webpack } from './Webpack';
+import { Bootstrap } from './Bootstrap';
 import { ModuleList } from './ModuleList';
 import data from '../data.json';
 
 export class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state= {
       list: [
         {
-          module: "React.js",
-          description: "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable and easier to debug."
+          key: '1',
+          value: 'hello world'
         },
         {
-          module: "Webpack",
-          description: "Webpack is a module bundler for modern JavaScript applications. When webpack processes your application, it recursively builds a dependency graph that includes every module your application needs, then packages all of those modules into a small number of bundles - often only one - to be loaded by the browser."
+          key: '2',
+          value: 'goodbye'
         }
       ]
     }
@@ -21,10 +26,22 @@ export class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="jumbotron">
+      {
+        console.log(this.props.location.pathname)
+      }
+        <div className="jumbotron text-center">
           <h1 style={{fontSize: "8rem"}}>{data.key}</h1>
+          <Link to="/">
+            <div className="btn btn-outline-violet m-2">Main</div>
+          </Link>
         </div>
-        <ModuleList modules={this.state.list} />
+        <Switch>
+          <Route exact path="/reactjs" component={ReactJs} /> 
+          <Route exact path="/webpack" component={Webpack} /> 
+          <Route exact path="/bootstrap" component={Bootstrap} /> 
+          <Route exact path="/" component={ModuleList} /> 
+          <Route component={Whoops404} />
+        </Switch>
       </div>
     )
   }
