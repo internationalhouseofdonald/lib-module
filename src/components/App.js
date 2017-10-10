@@ -13,12 +13,7 @@ export class App extends Component {
     this.state= {
       list: [
         {
-          key: '1',
-          value: 'hello world'
-        },
-        {
-          key: '2',
-          value: 'goodbye'
+          
         }
       ]
     }
