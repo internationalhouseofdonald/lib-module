@@ -10,6 +10,8 @@ $magenta: #E609A2;
 .jumbotron {
   background: $cadetblue;
   border: 20px solid desaturate(lighten($cadetblue, 20%), 50%);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
 }
 
 .btn {
